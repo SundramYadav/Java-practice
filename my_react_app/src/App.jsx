@@ -6,22 +6,18 @@ import New from './component/assignment'
 
 function App() {
   const [count, setCount] = useState(0)
+  let data = 10000
 
   function fun(){
-    alert ("alert")
-  }
-
-  const handleClick=(fruitName)=>{
-    alert ("fruitname")
+    data = data - 2000;
+    alert("inside Function "+ data)
   }
 
   return (
     <>
-    <h1> Example of click event </h1>
-    <button onClick={fun}>click</button>
-   <button onClick={() => handleClick("Apple")}>APPLE</button>
-      <button onClick={() => handleClick("Banana")}>BANANA</button>
-      <button onClick={() => handleClick("Guava")}>GUAVA</button>
+      <h2>representation of state of variables</h2>
+      <h3>{data}</h3>
+      <button onClick={fun}> click </button>
     </>
   )
 }
